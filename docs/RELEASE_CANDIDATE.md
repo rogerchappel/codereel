@@ -17,3 +17,9 @@ npm test
 npm run check
 npm run smoke
 ```
+
+## PR Review Focus
+
+- Confirm generated claims stay evidence-backed.
+- Confirm static HTML frames render from `storyboard.json`.
+- Confirm no external media provider is required for the core workflow.
