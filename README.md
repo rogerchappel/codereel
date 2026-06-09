@@ -18,6 +18,7 @@ The kit includes:
 - `storyboard.json`: scene timeline for renderers.
 - `demo-commands.md`: safe local command suggestions.
 - `verification.json`: pass/warn report for claims and scenes.
+- `assets.md`: screenshot and capture cue sheet.
 
 ## Commands
 

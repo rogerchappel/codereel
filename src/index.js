@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { renderAssets } from "./assets.js";
 import { buildClaims } from "./claims.js";
 import { exportHtmlFrames } from "./export-html.js";
 import { inspectRepo } from "./inspect.js";
@@ -22,6 +23,7 @@ export async function createKit(repoPath, outDir) {
   await writeJson(path.join(outDir, "storyboard.json"), storyboard);
   await writeJson(path.join(outDir, "verification.json"), verification);
   await writeFile(path.join(outDir, "demo-commands.md"), renderDemoCommands(demoCommands), "utf8");
+  await writeFile(path.join(outDir, "assets.md"), renderAssets(repo, storyboard), "utf8");
   return { repo, claims, storyboard, verification, demoCommands };
 }
 
