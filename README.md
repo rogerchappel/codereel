@@ -1,0 +1,56 @@
+# codereel
+
+`codereel` turns a local repository into an honest walkthrough package for demo videos, launch posts, or release reviews. It inspects real files first, generates grounded claims, and emits renderer-neutral assets that another tool can turn into media.
+
+## Quickstart
+
+```bash
+npm install
+npm run smoke
+node bin/codereel.js kit ./fixtures/cli-tool --out .codereel
+```
+
+The kit includes:
+
+- `repo.json`: detected repo facts.
+- `claims.json`: generated claims with evidence.
+- `script.md`: narrated walkthrough script.
+- `storyboard.json`: scene timeline for renderers.
+- `demo-commands.md`: safe local command suggestions.
+- `verification.json`: pass/warn report for claims and scenes.
+
+## Commands
+
+```bash
+codereel inspect ./repo --out .codereel
+codereel script ./repo --out .codereel
+codereel storyboard ./repo --out .codereel
+codereel kit ./repo --out .codereel
+codereel verify .codereel/storyboard.json --repo ./repo
+codereel export .codereel/storyboard.json --out .codereel/frames
+```
+
+## Examples
+
+Generate a complete kit for a CLI project:
+
+```bash
+node bin/codereel.js kit fixtures/cli-tool --out /tmp/codereel-demo
+```
+
+Export static review frames:
+
+```bash
+node bin/codereel.js export /tmp/codereel-demo/storyboard.json --out /tmp/codereel-demo/frames
+```
+
+## Limitations
+
+- V1 only accepts local paths.
+- Generated narration is template-based and should be edited before publishing.
+- Verification checks evidence links and safe command detection; it does not prove product quality.
+- Final video rendering, avatar generation, TTS, and social posting are intentionally out of scope.
+
+## Safety Notes
+
+`codereel` reads the target repository and writes to the selected output directory. It does not publish, clone, mutate the inspected repo, call paid media APIs, or run discovered project commands.
