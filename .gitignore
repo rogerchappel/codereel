@@ -1,0 +1,4 @@
+node_modules/
+.codereel/
+coverage/
+.DS_Store

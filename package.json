@@ -1,0 +1,26 @@
+{
+  "name": "codereel",
+  "version": "0.1.0",
+  "description": "Generate truthful repo walkthrough scripts, storyboards, and verification kits.",
+  "type": "module",
+  "bin": {
+    "codereel": "./bin/codereel.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/validate.js",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "agent-skill",
+    "repo-video",
+    "storyboard",
+    "devrel",
+    "walkthrough"
+  ],
+  "author": "Roger Chappel",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
