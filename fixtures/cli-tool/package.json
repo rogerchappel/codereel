@@ -1,0 +1,12 @@
+{
+  "name": "demo-cli",
+  "description": "A fixture CLI that formats release notes.",
+  "type": "module",
+  "bin": {
+    "demo-cli": "./bin/demo-cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "smoke": "demo-cli --help"
+  }
+}
