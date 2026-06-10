@@ -45,6 +45,18 @@ Export static review frames:
 node bin/codereel.js export /tmp/codereel-demo/storyboard.json --out /tmp/codereel-demo/frames
 ```
 
+## Development
+
+Run the same release-readiness checks locally before opening a PR:
+
+```bash
+npm run check
+npm test
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
+
 ## Limitations
 
 - V1 only accepts local paths.
