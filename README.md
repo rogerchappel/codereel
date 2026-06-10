@@ -51,6 +51,7 @@ Run the same release-readiness checks locally before opening a PR:
 
 ```bash
 npm run check
+npm run build
 npm test
 npm run smoke
 npm run package:smoke

@@ -20,11 +20,12 @@
     "SKILL.md"
   ],
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "node --test",
     "check": "node scripts/validate.js",
     "smoke": "bash scripts/smoke.sh",
     "package:smoke": "npm pack --dry-run",
-    "release:check": "npm run check && npm test && npm run smoke && npm run package:smoke"
+    "release:check": "npm run check && npm run build && npm test && npm run smoke && npm run package:smoke"
   },
   "keywords": [
     "agent-skill",

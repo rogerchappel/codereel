@@ -56,6 +56,9 @@ jobs:
       - name: Validate package
         run: npm run check
 
+      - name: Run build checks
+        run: npm run build
+
       - name: Run tests
         run: npm test
 
