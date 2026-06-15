@@ -68,3 +68,12 @@ npm run release:check
 ## Safety Notes
 
 `codereel` reads the target repository and writes to the selected output directory. It does not publish, clone, mutate the inspected repo, call paid media APIs, or run discovered project commands.
+
+## Release Verification
+
+Before publishing or tagging a release, run the local verification path that matches CI:
+
+- `npm run release:check`
+- `npm run package:smoke`
+
+The release checklist in `docs/release-readiness.md` captures the package surface, CLI bins, and reviewer notes for future release PRs.
