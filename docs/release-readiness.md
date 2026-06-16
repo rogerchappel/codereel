@@ -18,7 +18,7 @@ Use this checklist before cutting a release or asking a reviewer to trust the pa
 - `npm run test`: `node --test`
 - `npm run build`: `node scripts/build.js`
 - `npm run smoke`: `bash scripts/smoke.sh`
-- `npm run package:smoke`: `npm pack --dry-run`
+- `npm run package:smoke`: `node scripts/package-smoke.js`
 - `npm run release:check`: `npm run check && npm run build && npm test && npm run smoke && npm run package:smoke`
 
 Run `npm run release:check` when available before opening a release PR. When a command is unavailable, use the closest listed command and record the reason in the PR.

@@ -77,3 +77,6 @@ Before publishing or tagging a release, run the local verification path that mat
 - `npm run package:smoke`
 
 The release checklist in `docs/release-readiness.md` captures the package surface, CLI bins, and reviewer notes for future release PRs.
+`package:smoke` runs a dry-run package build and confirms the CLI, source
+modules, fixtures, docs, skill file, README, and license are present in the
+tarball.
