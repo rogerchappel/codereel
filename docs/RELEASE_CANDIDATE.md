@@ -16,10 +16,18 @@ Run:
 npm test
 npm run check
 npm run smoke
+npm run package:smoke
+npm run release:check
 ```
+
+`npm run check` also verifies the public package contract: source repository
+links, issue tracker metadata, release script wiring, and the pack allowlist for
+runtime files and support docs.
 
 ## PR Review Focus
 
 - Confirm generated claims stay evidence-backed.
 - Confirm static HTML frames render from `storyboard.json`.
 - Confirm no external media provider is required for the core workflow.
+- Confirm package metadata and pack contents still match the README-facing
+  public surface.
