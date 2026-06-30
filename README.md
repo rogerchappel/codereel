@@ -39,11 +39,19 @@ Generate a complete kit for a CLI project:
 node bin/codereel.js kit fixtures/cli-tool --out /tmp/codereel-demo
 ```
 
+Generate and verify a docs-only walkthrough kit:
+
+```bash
+bash demo/run-docs-only-kit.sh
+```
+
 Export static review frames:
 
 ```bash
 node bin/codereel.js export /tmp/codereel-demo/storyboard.json --out /tmp/codereel-demo/frames
 ```
+
+For a recording-ready walkthrough, see [docs/tutorials/docs-only-walkthrough-kit.md](docs/tutorials/docs-only-walkthrough-kit.md) and [docs/promo/docs-only-video-brief.md](docs/promo/docs-only-video-brief.md).
 
 ## Development
 
