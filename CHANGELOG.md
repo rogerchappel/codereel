@@ -10,6 +10,8 @@ format and uses semantic versioning when versioned releases are published.
 ### Added
 
 - Initial project setup.
+- Structured package smoke verification for the tarball allowlist, CLI bin
+  metadata, and public repository link.
 
 ## Release Links
 
