@@ -21,7 +21,7 @@ test("release check includes pack verification", async () => {
 test("package allowlist includes runtime and public support files", async () => {
   const pkg = JSON.parse(await readFile("package.json", "utf8"));
 
-  for (const entry of ["bin", "src", "fixtures", "README.md", "LICENSE", "SKILL.md"]) {
+  for (const entry of ["bin", "src", "demo", "fixtures", "README.md", "LICENSE", "SKILL.md"]) {
     assert.ok(pkg.files.includes(entry), `${entry} should be packed`);
   }
 });

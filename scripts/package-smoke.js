@@ -15,6 +15,7 @@ const required = [
   'src/storyboard.js',
   'docs/OUTPUT_CONTRACT.md',
   'docs/RELEASE_CANDIDATE.md',
+  'demo/run-docs-only-kit.sh',
   'fixtures/cli-tool/package.json',
   'SKILL.md',
   'README.md',
