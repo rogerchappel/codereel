@@ -51,7 +51,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -euo pipefail
-          npm install
+          npm ci
 
       - name: Validate package
         run: npm run check
