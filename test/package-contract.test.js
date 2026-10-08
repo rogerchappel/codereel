@@ -25,3 +25,14 @@ test("package allowlist includes runtime and public support files", async () => 
     assert.ok(pkg.files.includes(entry), `${entry} should be packed`);
   }
 });
+
+test("package smoke validates the packed runtime contract", async () => {
+  const smoke = await readFile("scripts/package-smoke.js", "utf8");
+
+  for (const artifact of ["bin/codereel.js", "src/index.js", "src/inspect.js", "docs/OUTPUT_CONTRACT.md"]) {
+    assert.ok(smoke.includes(`'${artifact}'`), `${artifact} should be required by package smoke`);
+  }
+  assert.match(smoke, /npm', \['pack', '--json'\]/);
+  assert.match(smoke, /installedRoot.*bin\/codereel\.js/s);
+  assert.match(smoke, /process\.execPath/);
+});
